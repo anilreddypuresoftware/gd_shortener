@@ -9,11 +9,11 @@ workflows:
     jobs:
       
       - test-3.8
+      - test-arm64
       
 
 jobs:
-  test-3.8: &test-template-python3
-  arm64: &test-template-python3
+  test-3.6: &test-template-python3
     docker:
       - image: circleci/python:3.6.1
 
