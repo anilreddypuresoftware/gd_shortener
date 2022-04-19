@@ -52,7 +52,7 @@ jobs:
 
 workflows:
   version: 2
-  python3.7:
+  python3.8:
     jobs:
       
       - build-medium-amd64
