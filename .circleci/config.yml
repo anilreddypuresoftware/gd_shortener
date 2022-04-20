@@ -7,7 +7,6 @@ workflows:
   version: 2
   test:
     jobs:
-      - build-medium arm64
       - test-3.8
       - test-arm
       
