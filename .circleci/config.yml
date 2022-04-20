@@ -9,6 +9,7 @@ workflows:
     jobs:
       - build-medium arm64
       - test-3.8
+      - test-arm
       
 
 jobs:
@@ -89,6 +90,10 @@ jobs:
             . venv/bin/activate
             pip install nose
             nosetests
-  
+  test-arm:
+      <<: *test-template-python3
+      docker:
+      - image: circleci/python:3.8.0
+      resource_class: arm.medium
   
   
