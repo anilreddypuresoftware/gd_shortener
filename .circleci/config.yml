@@ -12,9 +12,9 @@ workflows:
       
 
 jobs:
-  test-3.6: &test-template-python3
+  test-3.8: 
     docker:
-      - image: circleci/python:3.6.1
+      - image: circleci/python:3.8.0
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -52,7 +52,4 @@ jobs:
             nosetests
   
   
-  test-3.8:
-      <<: *test-template-python3
-      docker:
-        - image: circleci/python:3.8.0
+  
